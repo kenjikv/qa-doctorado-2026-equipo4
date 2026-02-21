@@ -7,22 +7,22 @@
 
 ---
 
-## Slide 1 — Qué ofrece la propuesta (solo hechos del texto)
+## Slide 1 — Qué ofrece la propuesta
 - **Objetivo declarado (copiar 1 frase o resumir):** Programa integral basado en evidencia reproducible y gobernanza del quality gate, con el objetivo de **sostener calidad continua sin frenar el flujo**, mediante checks críticos (must-pass) y un mecanismo formal de excepciones.  
   **Referencia:** Sección 1
 
-- **Alcance / exclusiones (2+ puntos):**
+- **Alcance / exclusiones:**
   - Incluye: escenarios (6–10) con evidencia, matriz y estrategia Top 3, diseño sistemático (≥12 casos), oráculos mínimos/estrictos, gate CI con artifacts, política de excepciones y registro de cambios. **Ref:** Sección 3
   - Excluye: performance a gran escala y pruebas de seguridad especializadas. **Ref:** Sección 3
 
-- **Entregables principales (3+ puntos):**
+- **Entregables principales:**
   - Gate CI con checks críticos bloqueantes y publicación de artifacts. **Ref:** Sección 4 (Fase 4), 8
   - Política de excepciones y registro de cambios operativo. **Ref:** Sección 3, 5, 8
   - Escenarios con evidencia reproducible versionada y diseño sistemático EQ/BV + pairwise. **Ref:** Sección 3, 4 (Fases 1–3), 8
 
 ---
 
-## Slide 2 - Fortalezas (basadas en texto)
+## Slide 2 - Fortalezas
 > 3-5 fortalezas. Cada una debe citar una sección.
 
 - **F1:** Metodología Clara con pasos identificables
@@ -44,7 +44,7 @@
 
 ---
 
-## Slide 3 - Debilidades / riesgos (basadas en texto)
+## Slide 3 - Debilidades / riesgos
 > 3-6 debilidades. Marcar severidad: **Crítica / Mayor / Menor**.
 > Cada debilidad debe citar una sección de la propuesta.
 
@@ -68,14 +68,14 @@
 ---
 
 ## Slide 4 - Cobertura explícita vs vacíos
-### A) Lo que la propuesta sí define (3-5 puntos)
+### A) Lo que la propuesta sí define
 - Escenarios con medida y evidencia esperada **Ref:** Sección 4
 - Matriz de riesgos, impacto por probabilidad **Ref:** Sección 4
 - Gate safe con checks criticos bloqueantes  **Ref:** Sección 4
 - Revisión semanal y auditorias **Ref:** Sección 6
 - Entregas incrementales con hitos **Ref:** Sección 6
 
-### B) Vacíos/ambigüedades que impiden evaluar bien (3-5 puntos)
+### B) Vacíos/ambigüedades que impiden evaluar bien
 - **Vacío 1:** Criterio concreto para "estabilizar baseline" y activar checks no funcionales como bloqueantes.  
   **Qué falta exactamente:** Definición operativa de estabilidad (ej.: X ejecuciones sin fallo, ventana temporal).  
   **Por qué importa:** Sin ello no se puede verificar que el gate evolucione de informativo a bloqueante.
@@ -96,7 +96,7 @@
   **Qué falta exactamente:** La propuesta indica costo total (USD 10,800) y lo que incluye (gobernanza, bitácora, estabilización), pero no asigna montos a cada fase o entregable.  
   **Por qué importa:** Complica la evaluación de valor, la comparación con alternativas y la negociación por fases.
 
-### C) Preguntas de aclaración al proveedor (2-4 preguntas)
+### C) Preguntas de aclaración al proveedor
 - **P1:** ¿Qué criterio operativo define que un check no funcional ha "estabilizado" y puede pasar de informativo a bloqueante?
 - **P2:** ¿Qué tipos de "justificación operativa" son aceptables para aprobar una excepción, y quién tiene autoridad para validarla?
 - **P3:** ¿Cuál es el plazo máximo recomendado para mantener un check en modo "temporalmente informativo" antes de decidir su reactivación o eliminación?
@@ -119,7 +119,7 @@
 
 ---
 
-## Slide 6 - Condiciones para aceptar (solo si el veredicto lo requiere)
+## Slide 6 - Condiciones para aceptar
 > 2-4 condiciones **verificables**. Deben apuntar a corregir debilidades o llenar vacíos.
 
 - **C1:** Incluir en el contrato o anexo técnico una definición operativa de "estabilización de baseline" (ej.: 5 ejecuciones consecutivas sin fallo en 7 días) como requisito para pasar un check de informativo a bloqueante.  
@@ -140,11 +140,11 @@
 
 ---
 
-## Slide 7 - Veredicto (decisión final)
+## Slide 7 - Veredicto
 - **Decisión:** Aceptar con condiciones
 
 - **Justificación:**
-  1) La propuesta es sólida en metodología (escenarios, riesgo, oráculos, diseño sistemático, quality gate) y gobernanza, pero los vacíos en estabilización de baseline, justificación de excepciones y plazos "temporales" impiden evaluar el rigor real del gate (D1, D2, D3, Vacíos 1–3).
+  1) La propuesta es regular en metodología (escenarios, riesgo, oráculos, diseño sistemático, quality gate) y gobernanza, pero los vacíos en estabilización de baseline, justificación de excepciones y plazos "temporales" impiden evaluar el rigor real del gate (D1, D2, D3, Vacíos 1–3).
   2) El riesgo de Goodhart/gaming por excepciones y rebajas de severidad es real y no está mitigado con criterios verificables (Slide 5).
   3) Las condiciones C1–C4 son verificables y corrigen los vacíos principales; su cumplimiento antes de la Fase 4 (o en el contrato) hace la propuesta aceptable.
 
